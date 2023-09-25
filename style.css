@@ -1,10 +1,9 @@
-
 body {
 	margin: 0;
 	font-family: monospace;
 }
 
-/* .card {
+.card {
 	text-align: center;
 	border: grey solid 1px;
 	padding: 1rem;
@@ -13,7 +12,7 @@ body {
 	display: inline-grid;
 	margin: 1rem 2rem;
 	box-shadow: 3px 4px #e04b52;
-} */
+}
 
 /* .makup pic {
 	justify-self: 
@@ -39,4 +38,3 @@ body {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-
