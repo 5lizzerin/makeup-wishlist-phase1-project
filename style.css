@@ -1,5 +1,40 @@
-/* styling will go here */
-
 body {
-    background-color:aqua
+	margin: 0;
+	font-family: monospace;
+}
+
+/* .card {
+	text-align: center;
+	border: grey solid 1px;
+	padding: 1rem;
+	width: 15rem;
+	height: 25rem;
+	display: inline-grid;
+	margin: 1rem 2rem;
+	box-shadow: 3px 4px #e04b52;
+} */
+
+/* .makup pic {
+	justify-self: 
+	height: 12rem;
+	width: auto;
+} */
+
+.input-text {
+	border-radius: 5px;
+	height: 2rem;
+	width: 50%;
+
+	font-size: 16px;
+	font-family: monospace;
+	margin: 3px;
+}
+/* .input-description { */
+/* width: 50%; */
+/* } */
+
+.input-boxes {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
