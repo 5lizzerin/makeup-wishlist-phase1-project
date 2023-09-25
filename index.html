@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Makeup Wishlist</title>
-        <meta charset="utc-8">
-        <script defer src="index.js"> </script>
-        <link rel ="stylesheet" href="style.css">
-    </head>
-<body>
-    <h1 id="header">My Makeup Wishlist</h1>
-    <div class="container"></div>
-        <form class="add-new-makeup-product">
-            <h2>Add a makeup product</h2>
+	<head>
+		<title>"My Makeup Wishlist"</title>
+		<meta charset="utc-8" />
+		<script defer src="index.js"></script>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<h1 id="header">My Makeup Wishlist</h1>
+		<div class="container"></div>
+		<form class="add-new-makeup-product">
+			<h2>Add a makeup</h2>
+			<div class="input-boxes">
+				<input
+					type="text"
+					name="Makeup Product"
+					value=""
+					placeholder="Add a new makeup prodcut"
+					class="input-text"
+				/>
 
-            <input
-                type="text"
-                name="Makeup Product"
-                value=""
-                placeholder="Add a new makeup prodcut"
-                class="input-text"
-                />
-                <br/>
-            <input 
-                type="text"
-                description="descritpion"
-                value=""
-                placeholder="Add a description"
-                class="input-text"
-                />
-            <br/>
-            <input
-                type="text"
-                name="image"
-                value=""
-                placeholder="Add the makeup product's image"
-                class="input-text"
-            />
-            <br/>
-            <input
-                type="submit"
-                name="submit"
-                value="Add a makeup product"
-                class="submit"
-            />
-        </form>
-    <div class="card">
-        <h2 id="makeup-name">Placeholder Makeup Product</h2>
-        <img id="makeup-image" src="makeup_image_url" class="makeup-product" />
-        <p id="makeup-price">Placeholder for price</p>
-        <button class="like-btn" id="[makeup-id]">❤️</button>
-    </div> 
-</body>
+				<input
+					type="text"
+					description="descritpion"
+					value=""
+					placeholder="Add a description"
+					class="input-text input-description"
+				/>
+
+				<input
+					type="text"
+					name="image"
+					value=""
+					placeholder="Add the makeup product's image"
+					class="input-text"
+				/>
+
+				<input
+					type="submit"
+					name="submit"
+					value="Add a makeup product"
+					class="submit"
+				/>
+			</div>
+		</form>
+		<div class="card">
+			<h2>Placeholder Makeup Product</h2>
+			<img src="[makeup_image_url]" class="makeup-product" />
+			<p>Placeholder for cost</p>
+			<button class="like-btn" id="[makeup-id]">❤️</button>
+		</div>
+	</body>
 </html>
