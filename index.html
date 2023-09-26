@@ -8,37 +8,49 @@
 	</head>
 	<body>
 		<h1>My Makeup Wishlist</h1>
-		<form class="add-new-makeup-product">
+		<form id="new-makeup-form" class="add-new-makeup-product">
 			<h2>Add a makeup</h2>
 			<div class="input-boxes">
 				<input
+					id="new-makeup-name"
 					type="text"
 					name="Makeup Product"
 					value=""
-					placeholder="Add a new makeup prodcut"
+					placeholder="Makeup name"
 					class="input-text"
 				/>
 
 				<input
+					id="new-makeup-description"
 					type="text"
-					description="descritpion"
+					description="description"
 					value=""
-					placeholder="Add a description"
+					placeholder="Description"
 					class="input-text input-description"
 				/>
 
 				<input
+					id="new-makeup-image"
 					type="text"
 					name="image"
 					value=""
-					placeholder="Add the makeup product's image"
+					placeholder="Image"
+					class="input-text"
+				/>
+
+				<input
+					id="new-makeup-price"
+					type="number"
+					name="price"
+					value=""
+					placeholder="Price"
 					class="input-text"
 				/>
 
 				<input
 					type="submit"
 					name="submit"
-					value="Add a makeup product"
+					value="Add makeup product"
 					class="submit"
 				/>
 			</div>
