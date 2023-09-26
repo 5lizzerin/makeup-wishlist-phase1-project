@@ -34,11 +34,28 @@ fetch(makeupUrl)
 					/>
 				</svg>
 			`;
+
+			likeBtn.addEventListener('click', () => {
+				console.log(likeBtn);
+				likeBtn.classList.toggle('selected');
+			});
+
 			card.append(productImage, productName, productPrice, likeBtn);
 
 			console.log(makeupContainer);
 			makeupContainer.append(card);
 		}
+
+		// const btn = document.getElementById('start-over-button');
+		// btn.addEventListener('click', () => {
+		//   console.log(btn);
+
+		//   const checkboxes = document.getElementsByClassName('check');
+		//   console.log(checkboxes);
+		//   for (const checkbox of checkboxes) {
+		//     checkbox.checked = false;
+		//   }
+		// });
 	});
 
 const makeupContainer = document.querySelector('.makeup-container');
