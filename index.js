@@ -71,7 +71,6 @@ newMakeupForm.addEventListener("submit", (event => {
 	const newPrice = document.querySelector("#new-makeup-price").value
 	const newMakeupProduct = {
 		name: newName,
-		description: newDescription,
 		image_link: newImage,
 		price: newPrice
 		}
