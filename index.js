@@ -12,14 +12,12 @@ fetch(makeupUrl)
 
 function renderMakeupProduct (record){
 	const card = document.createElement('div');
+
 	const productName = document.createElement('h2');
 	productName.innerText = record.name;
 
 	const productImage = document.createElement('img');
 	productImage.src = record.image_link;
-
-	// const productPrice = document.createElement('p');
-	// productPrice.innerText = `$${record.price}`;
 
 	const likeBtn = document.createElement('button');
 	likeBtn.setAttribute('class', 'like-btn');
@@ -58,7 +56,6 @@ const newMakeupForm = document.getElementById("new-makeup-form")
 newMakeupForm.addEventListener("submit", (event => {
 	event.preventDefault();
 	const newName = document.getElementById("new-makeup-name").value
-	// const newDescription = document.getElementById("new-makeup-description").value
 	const newImage = document.querySelector("#new-makeup-image").value
 	const newPrice = document.querySelector("#new-makeup-price").value
 	const newMakeupProduct = {
@@ -69,49 +66,6 @@ newMakeupForm.addEventListener("submit", (event => {
 		}
 	renderMakeupProduct(newMakeupProduct)
 	newMakeupForm.reset();
-
-	console.log(newName, newImage, newDescription, newPrice)
-
-
-	// const newName = event.target.name.value
-	// const newDescription = event.target.description.value
-	// const newImage = event.target.image.value
-	// const newPrice = event.target.price.value
-		// const newMakeupProduct = {
-	// 	name: newName,
-	// 	description: newDescription,
-	// 	image: newImage,
-	// 	price: newPrice
-	// }
-	// renderMakeupProduct(newMakeupProduct)
-	// newMakeupForm.reset()
-
-
 }))
-
-
-//get container element
-//make div element
-//append it in container element
-//add card class to div element
-//append card div to container
-//--
-//make h2 element
-//make make name inner text
-//append h2 to card div
-//--
-//make img element
-//add src attribute
-//add class attribute
-//append img to card div
-//--
-//make p element
-//make price inner text
-//append p to card div
-//--
-//make button element
-//add class attribute
-//add id attribute
-//append button to card div
 
 
