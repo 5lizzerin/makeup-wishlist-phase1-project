@@ -8,6 +8,17 @@ fetch(makeupUrl)
 		for (record of makeupArray){
 			renderMakeupProduct(record);
 		}
+
+		// const btn = document.getElementById('start-over-button');
+		// btn.addEventListener('click', () => {
+		//   console.log(btn);
+
+		//   const checkboxes = document.getElementsByClassName('check');
+		//   console.log(checkboxes);
+		//   for (const checkbox of checkboxes) {
+		//     checkbox.checked = false;
+		//   }
+		// });
 	});
 
 function renderMakeupProduct (record){
