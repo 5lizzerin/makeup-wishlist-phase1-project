@@ -8,6 +8,17 @@ fetch(makeupUrl)
 		for (record of makeupArray){
 			renderMakeupProduct(record);
 		}
+
+		// const btn = document.getElementById('start-over-button');
+		// btn.addEventListener('click', () => {
+		//   console.log(btn);
+
+		//   const checkboxes = document.getElementsByClassName('check');
+		//   console.log(checkboxes);
+		//   for (const checkbox of checkboxes) {
+		//     checkbox.checked = false;
+		//   }
+		// });
 	});
 
 	function renderMakeupProduct (record){
@@ -40,7 +51,7 @@ fetch(makeupUrl)
 			</svg>
 		`;
 		card.append(productImage, productName, productPrice, likeBtn);
-		makeupContainer.append(card);
+		makeupContainer.prepend(card);
 	}
 
 
@@ -54,7 +65,7 @@ fetch(makeupUrl)
 		const newMakeupProduct = {
 			name: newName,
 			description: newDescription,
-			image: newImage,
+			image_link: newImage,
 			price: newPrice
 		}
 		renderMakeupProduct(newMakeupProduct)
