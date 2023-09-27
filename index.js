@@ -2,10 +2,11 @@ const makeupContainer = document.querySelector('.makeup-container');
 
 const makeupUrl =
 	'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+
 fetch(makeupUrl)
 	.then(makeupUrlResponse => makeupUrlResponse.json())
 	.then(makeupArray => {
-		for (record of makeupArray){
+		for (record of makeupArray) {
 			renderMakeupProduct(record);
 		}
 
@@ -21,7 +22,7 @@ fetch(makeupUrl)
 		// });
 	});
 
-function renderMakeupProduct (record){
+function renderMakeupProduct(record) {
 	const card = document.createElement('div');
 
 	const productName = document.createElement('h2');
@@ -49,33 +50,39 @@ function renderMakeupProduct (record){
 			</svg>
 		`;
 
-		likeBtn.addEventListener('click', () => {
+	likeBtn.addEventListener('click', () => {
 		likeBtn.classList.toggle('selected');
-		});
+	});
 
-	productImage.addEventListener("mouseover", () => {
-		const productPrice = document.createElement("div")
-		productPrice.innerText = `$${record.price}`
-		card.append(productPrice)
-	}, {once: true});
-		card.append(productImage, productName, likeBtn);
-		makeupContainer.prepend(card)
-	}
+	productImage.addEventListener('click', () => {
+		productImage.classList.toggle('enlarged');
+	});
 
+	productImage.addEventListener(
+		'mouseover',
+		() => {
+			const productPrice = document.createElement('div');
+			productPrice.innerText = `$${record.price}`;
+			card.append(productPrice);
+		},
+		{ once: true }
+	);
 
-const newMakeupForm = document.getElementById("new-makeup-form")
-newMakeupForm.addEventListener("submit", (event => {
+	card.append(productImage, productName, likeBtn);
+	makeupContainer.prepend(card);
+}
+
+const newMakeupForm = document.getElementById('new-makeup-form');
+newMakeupForm.addEventListener('submit', event => {
 	event.preventDefault();
-	const newName = document.getElementById("new-makeup-name").value
-	const newImage = document.querySelector("#new-makeup-image").value
-	const newPrice = document.querySelector("#new-makeup-price").value
+	const newName = document.getElementById('new-makeup-name').value;
+	const newImage = document.querySelector('#new-makeup-image').value;
+	const newPrice = document.querySelector('#new-makeup-price').value;
 	const newMakeupProduct = {
 		name: newName,
 		image_link: newImage,
-		price: newPrice
-		}
-	renderMakeupProduct(newMakeupProduct)
+		price: newPrice,
+	};
+	renderMakeupProduct(newMakeupProduct);
 	newMakeupForm.reset();
-}))
-
-
+});
