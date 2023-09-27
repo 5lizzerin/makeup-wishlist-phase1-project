@@ -58,17 +58,30 @@ function renderMakeupProduct(record) {
 		productImage.classList.toggle('enlarged');
 	});
 
-	productImage.addEventListener(
-		'mouseover',
-		() => {
-			const productPrice = document.createElement('div');
-			productPrice.innerText = `$${record.price}`;
-			card.append(productPrice);
-		},
-		{ once: true }
-	);
+	// productImage.addEventListener(
+	// 	'mouseover',
+	// 	() => {
+	// 		const productPrice = document.createElement('div');
+	// 		productPrice.innerText = `$${record.price}`;
+	// 		card.append(productPrice);
+	// 	},
+	// 	{ once: true }
+	// );
+	const productPrice = document.createElement('div');
+	productPrice.setAttribute('class', 'hidden');
+	productPrice.innerText = `$${record.price}`;
 
-	card.append(productImage, productName, likeBtn);
+	card.addEventListener('mouseenter', mouseEnter => {
+		productPrice.classList.toggle('hidden');
+	});
+	card.addEventListener('mouseleave', mouseLeave => {
+		cs;
+		console.log('leave');
+		productPrice.classList.toggle('hidden');
+	});
+
+	card.append(productImage, productName, likeBtn, productPrice);
+
 	makeupContainer.prepend(card);
 }
 
