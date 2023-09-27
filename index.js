@@ -8,17 +8,6 @@ fetch(makeupUrl)
 		for (record of makeupArray){
 			renderMakeupProduct(record);
 		}
-
-		// const btn = document.getElementById('start-over-button');
-		// btn.addEventListener('click', () => {
-		//   console.log(btn);
-
-		//   const checkboxes = document.getElementsByClassName('check');
-		//   console.log(checkboxes);
-		//   for (const checkbox of checkboxes) {
-		//     checkbox.checked = false;
-		//   }
-		// });
 	});
 
 function renderMakeupProduct (record){
@@ -57,16 +46,35 @@ function renderMakeupProduct (record){
 			productImage.classList.toggle('enlarged');
 		});
 
-	productImage.addEventListener("mouseover", () => {
-		const productPrice = document.createElement("p")
-		productPrice.innerText = `$${record.price}`
-		card.append(productPrice)
-		console.log(productPrice)
-		productImage.addEventListener("mouseleave", () =>{
-			card.removeChild(productPrice)
-		})
-	})
-		card.append(productImage, productName, likeBtn);
+
+		
+
+		const productPrice = document.createElement('div');
+		productPrice.setAttribute('class', 'hidden');
+		productPrice.innerText = `$${record.price}`;
+	
+		card.addEventListener('mouseenter', mouseEnter => {
+			productPrice.classList.toggle('hidden');
+		});
+		card.addEventListener('mouseleave', mouseLeave => {
+			console.log('leave');
+			productPrice.classList.toggle('hidden');
+		});
+
+	// productImage.addEventListener("mouseover", () => {
+	// 	const productPrice = document.createElement("p")
+	// 	productPrice.innerText = `$${record.price}`
+	// 	card.append(productPrice)
+	
+	// })
+
+	// productImage.addEventListener("mouseleave", () =>{
+	// 	const productPriceRemoved = document.querySelectorAll("p")
+	// 	card.removeChild(productPriceRemoved[0]);
+	// })
+
+
+		card.append(productImage, productName, likeBtn, productPrice);
 		makeupContainer.prepend(card)
 	}
 
