@@ -93,6 +93,7 @@ img {
 	border-style: groove;
 	border-width: 0;
 	border-color: indianred;
+	max-width: 9.5rem;
 }
 
 .enlarged {
