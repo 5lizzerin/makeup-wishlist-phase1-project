@@ -58,6 +58,11 @@ function renderMakeupProduct (record){
 		productPrice.innerText = `$${record.price}`
 		card.append(productPrice)
 	}, {once: true});
+		// productImage.addEventListener("mouseleave", () => {
+		// 	const productPriceEmpty = document.querySelector("div.")
+		// })
+		//find the div that the price is in once it's created
+		//target that and return an empty string
 		card.append(productImage, productName, likeBtn);
 		makeupContainer.prepend(card)
 	}
