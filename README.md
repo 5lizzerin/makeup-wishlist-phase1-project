@@ -9,7 +9,7 @@ Project Requirements
     Three event listeners
         Event listener #1: click like button
         Event listener #2: submit a form for new makeup
-        Event listener #3: mouseover to see description
+        Event listener #3: mouseover to see price
     Iterate through an array at least once (ForEach/For Of etc)
 
 Project Pitch: https://docs.google.com/document/d/1hxFvS9VMRtFue9FAisNMYnJRx539HwXEy348Xdqi1Fc/edit

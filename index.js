@@ -45,10 +45,7 @@ function renderMakeupProduct (record){
 		productImage.addEventListener('click', () => {
 			productImage.classList.toggle('enlarged');
 		});
-
-
 		
-
 		const productPrice = document.createElement('div');
 		productPrice.setAttribute('class', 'hidden');
 		productPrice.innerText = `$${record.price}`;
